@@ -14,14 +14,14 @@ function enviarzapa() {
 
 function enviarzapb() {
     const zap = 5567991862667;
-    const msg = "Olá, gostaria de mais informações sobre o plano crescimento!";
-    const url = `https://wa.me/${zap}?text=${encodeURIComponent(msg)}`;
+    const msg1 = "Olá, gostaria de mais informações sobre o plano crescimento!";
+    const url = `https://wa.me/${zap}?text=${encodeURIComponent(msg1)}`;
     window.open(url, "_blank");
 }
 
 function enviarzapc() {
     const zap = 5567991862667;
-    const msg = "Olá, gostaria de mais informações sobre o plano posicionamento!";
-    const url = `https://wa.me/${zap}?text=${encodeURIComponent(msg)}`;
+    const msg2 = "Olá, gostaria de mais informações sobre o plano posicionamento!";
+    const url = `https://wa.me/${zap}?text=${encodeURIComponent(msg2)}`;
     window.open(url, "_blank");
 }
