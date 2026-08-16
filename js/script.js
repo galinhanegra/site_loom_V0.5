@@ -9,7 +9,7 @@ cards.forEach(card=>{
 function enviarzapa(){
     const zap=5567991862667
     const msg="Olá, gostaria de mais informações sobre o plano presença!"
-    const url=`https://wa.me/${5567991862667}?text=${Olá, gostaria de mais informações sobre o plano presença!}`;
+    const url=`https://wa.me/${zap}?text=${encodeURIComponent(msg)}`;
     window.open(url,"_blank");
 }
 function enviarzapb(){
