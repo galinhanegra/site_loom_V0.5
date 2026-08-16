@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOM</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+<!-- Biblioteca de Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="TOPO">
+        <div class="cab">
+            <img src="/img/topsite.png" alt="LogoCabecario" class="topsite">
+            <nav class="link">        
+                <a href="../index.html" class="serv">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="https://www.instagram.com/loom_ms/" target="_blank" class="serv">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="#" class="serv">
+                    <i class="fa-solid fa-users"></i> Clientes
+                </a>
+                <a href="paginas/servicos.html" class="serv">
+                    <i class="fa-solid fa-gear"></i> Serviços
+                </a>
+            </nav>
+
+        </div>
+    </header>
+    <!--este script controla o efeito do cabeçario-->
+    
+    <script>
+        let ultimaRolagem=0;
+        const cabecario=document.querySelector('.cab');
+        window.addEventListener('scroll',()=>{
+            const RolagemAtual=window.pageYOffset || document.documentElement.scrollTop;
+            if(RolagemAtual<=0){
+                cabecario.classList.remove('escondido')
+                return;
+            }
+            if (RolagemAtual>ultimaRolagem && RolagemAtual>100){
+                cabecario.classList.add('escondido');
+
+            }
+            
+            else if (RolagemAtual<ultimaRolagem){
+                    cabecario.classList.remove('escondido');
+            }
+            ultimaRolagem=RolagemAtual;
+        });
+    </script>
+    <!--esse div/quadro, vai servir para atualizarmos os valores dos planos, ou acrescentar promoções-->
+    <div class="quadro">
+        <div class="Plan" id="A">
+            <div class="flipA virado">
+                <div class="frontA">
+                    <div>
+                        <button class="saibamais" onclick="enviarzapa()">
+                            SAIBA MAIS
+                        </button>
+                    </div>
+                </div>
+                <div class="BackA">
+                    <H1 class="titulo1">LOOM PRESENÇA🕷️</H1>
+                    <h>R$997<br><b>R$297/mês</b></h>
+                    <div class="lista">
+                        <p>✅Google/Presença digital</p>
+                        <p>✅Landing Page/Site simples</p>
+                        <p>✅Botões de contato</p>
+                        <p>✅Informações comerciais</p>
+                        <p>✅Fotos e horarios</p>
+                        <p>✅Estrutura digital inicial</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="Plan" id="B">
+            <div class="flipB virado">
+                <div class="frontB">
+                    <div>
+                        <button class="saibamais" onclick="enviarzapb()">
+                            SAIBA MAIS
+                        </button>
+                    </div>
+                </div>
+                <div class="BackB">
+                    <H1 class="titulo1">LOOM CRESCIMENTO🕷️</H1>
+                    <h>R$1497<br><b>R$1297/mês</b></h>
+                    <div class="lista">
+                        <p>✅Tudo do presença</p>
+                        <p>✅Site profissional</p>
+                        <p>✅Instagram organizado</p>
+                        <p>✅8 conteudos por mês</p>
+                        <p>✅2 Reels por mês</p>
+                        <p>✅Acompanhamento</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="Plan" id="C">
+            <div class="flipC virado">
+                <div class="frontC">
+                    <div>
+                        <button onclick="enviarzapc()" class="saibamais">
+                            SAIBA MAIS
+                        </button>
+                    </div>
+                </div>
+                <div class="BackC">
+                    <H1 class="titulo1">LOOM POSICIONAMENTO🕷️</H1>
+                    <h>R$1997<br><b>R$1899/mês</b></h>
+                    <div class="lista">
+                        <p>✅Tudo do crescimento</p>
+                        <p>✅12 conteudos por mês</p>
+                        <p>✅4 reels por mês</p>
+                        <p>✅Estrategia avançada</p>
+                        <p>✅Identidade visual completa</p>
+                        <p>✅Suporte prioritario</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+    </div>    
+
+<script src="../js/script.js"></script>   
+</body>
+</html>
